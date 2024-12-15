@@ -5,7 +5,9 @@ import org.springframework.stereotype.Service
 
 @Service
 class EventoService(
-    val eventoRepository: EventoRepository
+    val eventoRepository: EventoRepository,
 ) {
     fun getEventos() = eventoRepository.findAll()
+
+    fun getEventoById(id: Long) = eventoRepository.findById(id)
 }

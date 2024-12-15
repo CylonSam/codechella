@@ -11,7 +11,7 @@ data class Evento(
     val tipo: TipoEvento,
     val nome: String,
     val data: LocalDate,
-    val descricao: String
+    val descricao: String,
 )
 
 enum class TipoEvento {
@@ -19,5 +19,5 @@ enum class TipoEvento {
     CONCERTO,
     TEATRO,
     PALESTRA,
-    WORKSHOP
+    WORKSHOP,
 }

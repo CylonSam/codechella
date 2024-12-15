@@ -9,14 +9,14 @@ data class EventoDto(
     val tipo: TipoEvento,
     val nome: String,
     val data: LocalDate,
-    val descricao: String
+    val descricao: String,
 )
 
-fun toDto(evento: Evento): EventoDto =
+fun toEventDto(evento: Evento): EventoDto =
     EventoDto(
         evento.id,
         evento.tipo,
         evento.nome,
         evento.data,
-        evento.descricao
+        evento.descricao,
     )
