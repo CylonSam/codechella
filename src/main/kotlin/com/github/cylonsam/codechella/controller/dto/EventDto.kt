@@ -5,14 +5,22 @@ import com.github.cylonsam.codechella.domain.TipoEvento
 import java.time.LocalDate
 
 data class EventoDto(
-    val id: Long,
+    val id: Long?,
     val tipo: TipoEvento,
     val nome: String,
     val data: LocalDate,
     val descricao: String,
-)
+) {
+    fun toEntity(): Evento =
+        Evento(
+            tipo = tipo,
+            nome = nome,
+            data = data,
+            descricao = descricao,
+        )
+}
 
-fun toEventDto(evento: Evento): EventoDto =
+fun toDto(evento: Evento): EventoDto =
     EventoDto(
         evento.id,
         evento.tipo,

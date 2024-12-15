@@ -7,7 +7,7 @@ import java.time.LocalDate
 @Table("eventos")
 data class Evento(
     @Id
-    val id: Long,
+    val id: Long? = null,
     val tipo: TipoEvento,
     val nome: String,
     val data: LocalDate,
